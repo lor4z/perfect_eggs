@@ -1,16 +1,5 @@
 # perfect_eggs
 
-A new Flutter project.
+Projeto **"Perfect Eggs"**
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este projeto visa auxiliar no preparo de ovos cozidos perfeitos, oferecendo três opções de tempo ideais para diferentes texturas de cozimento: **Soft**, **Medium** e **Hard**. Com um simples toque, o usuário pode selecionar o ponto desejado para seu ovo e iniciar o timer correspondente. Assim, o aplicativo garante um acompanhamento preciso do tempo de cozimento, ajudando a obter ovos exatamente como preferido, seja com a gema mais mole, intermediária, ou totalmente firme.
