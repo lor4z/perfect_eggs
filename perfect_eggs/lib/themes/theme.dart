@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 
 const brightness = Brightness.dark;
 const primaryColor = Color(0xFFFDBF00);
-const accentColor = Color(0xFFFFFFFF);
-/*
+const accentColor = Color.fromARGB(255, 27, 23, 23);
+
 ThemeData appTheme() {
   return ThemeData(
     brightness: brightness,
+    scaffoldBackgroundColor: const Color.fromARGB(255, 56, 56, 56),
     textTheme: new TextTheme(
+
+        /*
       body1: new TextStyle(
         fontFamily: "Montserrat",
+        color: Colors.white,
       ),
       body2: TextStyle(
         fontFamily: "Montserrat",
@@ -47,9 +51,9 @@ ThemeData appTheme() {
       title: TextStyle(
         fontFamily: "Montserrat",
       ),
-    ),
+      */
+        ),
     primaryColor: primaryColor,
-    accentColor: accentColor,
+    //accentColor: accentColor,
   );
 }
-*/
