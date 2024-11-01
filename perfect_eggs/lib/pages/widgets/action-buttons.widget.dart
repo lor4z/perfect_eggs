@@ -12,25 +12,25 @@ class ActionButtons extends StatelessWidget {
         return Button(
           label: "START",
           selected: true,
-          callback: bloc.start(),
+          callback: bloc.start, // Referência ao método
         );
       case "cooking":
         return Button(
           label: "STOP",
           selected: true,
-          callback: bloc.stop(),
+          callback: bloc.stop, // Referência ao método
         );
       case "done":
         return Button(
           label: "ALL DONE",
           selected: true,
-          callback: bloc.reset(),
+          callback: bloc.reset, // Referência ao método
         );
       default:
         return Button(
           label: "START",
           selected: true,
-          callback: bloc.start(),
+          callback: bloc.start, // Referência ao método
         );
     }
   }

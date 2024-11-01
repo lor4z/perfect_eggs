@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class AppBloc extends ChangeNotifier {
@@ -23,7 +22,7 @@ class AppBloc extends ChangeNotifier {
         {
           selected = "soft";
           time = 5.0 * 60;
-          notifyListeners();
+          _notifyAfterBuild();
           return;
         }
 
@@ -31,7 +30,7 @@ class AppBloc extends ChangeNotifier {
         {
           selected = "medium";
           time = 7.0 * 60;
-          notifyListeners();
+          _notifyAfterBuild();
           return;
         }
 
@@ -39,45 +38,51 @@ class AppBloc extends ChangeNotifier {
         {
           selected = "hard";
           time = 10.0 * 60;
-          notifyListeners();
+          _notifyAfterBuild();
           return;
         }
 
       default:
         {
           time = 5.0 * 60;
-          notifyListeners();
+          _notifyAfterBuild();
           return;
         }
     }
   }
 
   start() {
-    state = "Cooking...";
+    state = "cooking";
     timer = Timer.periodic(
       Duration(seconds: 1),
       (Timer t) => updateTime(),
     );
-    notifyListeners();
+    _notifyAfterBuild();
   }
 
   stop() {
     timer?.cancel();
-    state = "Stopped";
+    state = "stopped";
     seconds = 0;
     percent = 0;
-    notifyListeners();
+    _notifyAfterBuild();
   }
 
   done() {
     timer?.cancel();
-    state = "Done";
+    state = "done";
     seconds = 0;
     percent = 0;
-    notifyListeners();
+    _notifyAfterBuild();
   }
 
   reset() {
     stop();
+  }
+
+  void _notifyAfterBuild() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      notifyListeners();
+    });
   }
 }
